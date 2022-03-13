@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.task.noteapp">
+    package="com.exercise.images">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:allowBackup="false"
         android:name=".MyApplication"
+        android:allowBackup="true"
+        android:largeHeap="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SimpleNotes">
-        <activity android:name="com.task.noteapp.view.MainActivity"
-            android:windowSoftInputMode="adjustResize"
+        android:theme="@style/Theme.SimpleImageObvious.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".view.ImageViewerActivity"/>
+        <activity
+            android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
